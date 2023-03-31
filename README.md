@@ -28,6 +28,6 @@ The following features/interaction i implemented in this design.
 
 ![tabletView](./src/assets/tablet.png)
 
-## Responsiveness (desktop)
+## Responsiveness (mobile)
 
 ![mobileView](./src/assets/mobile.png)
