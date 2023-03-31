@@ -15,7 +15,12 @@ const TopNav = () => {
 		<header className='z-30 sticky top-0 left-0 right-0 bg-white border-b border-gray01 h-14 flex items-center justify-center'>
 			<div className='container max-w-[1100px] xl:px-20 px-4 mx-auto'>
 				<div className='flex justify-between w-full'>
-					<Image src={Logo} alt='IG Logo' width={103} height={29} />
+					<Image
+						src={'/svgs/igLogo.svg'}
+						alt='IG Logo'
+						width={103}
+						height={29}
+					/>
 					<div className='border border-gray01 w-full max-w-[215px] flex justify-center rounded'>
 						<div className=' max-w-[89px]'>
 							<Input
@@ -32,7 +37,7 @@ const TopNav = () => {
 							title='home'
 							icon={
 								<div className=' w-6 h-6 relative'>
-									<Image src={HomeLogo} alt='home-icon' fill />
+									<Image src={'/svgs/home.svg'} alt='home-icon' fill />
 								</div>
 							}
 						/>
@@ -41,7 +46,7 @@ const TopNav = () => {
 							title='messenger'
 							icon={
 								<div className=' w-6 h-6 relative'>
-									<Image src={Messenger} alt='home-icon' fill />
+									<Image src={'/svgs/messenger.svg'} alt='home-icon' fill />
 								</div>
 							}
 						/>
@@ -50,7 +55,12 @@ const TopNav = () => {
 							title='New Post'
 							icon={
 								<div className=' w-6 h-6 relative'>
-									<Image src={Post} alt='home-icon' width={25} height={25} />
+									<Image
+										src={'/svgs/newPosts.svg'}
+										alt='home-icon'
+										width={25}
+										height={25}
+									/>
 								</div>
 							}
 						/>
@@ -59,7 +69,7 @@ const TopNav = () => {
 							title='Explore'
 							icon={
 								<div className=' w-6 h-6 relative'>
-									<Image src={Navigation} alt='home-icon' fill />
+									<Image src={'/svgs/navigation.svg'} alt='home-icon' fill />
 								</div>
 							}
 						/>
@@ -69,7 +79,7 @@ const TopNav = () => {
 							icon={
 								<div className=' w-6 h-6 relative'>
 									<Image
-										src={Notification}
+										src={'/svgs/like.svg'}
 										alt='home-icon'
 										width={25}
 										height={25}

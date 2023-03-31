@@ -26,7 +26,7 @@ const Posts = ({
 					icon={<EllipsisOutlined style={{ color: '#000000' }} />}
 				/>
 			</div>
-			<div className='w-full h-[500px] md:h-[614px] relative'>
+			<div className='w-full h-[500px] md:h-[550px] lg:h-[614px] relative'>
 				<Image src={post} alt='post1' fill />
 			</div>
 			<PostComment caption={caption} likes={numberOfLikes} name={name} />

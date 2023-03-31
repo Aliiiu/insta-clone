@@ -28,7 +28,11 @@ const PostComment = ({ caption, likes, name }: IPostComment) => {
 						color='pink'
 						icon={
 							<div onClick={handleLikeClick} className='relative w-6 h-full'>
-								<Image src={liked ? likedIcon : like} alt='like icon' fill />
+								<Image
+									src={liked ? '/svgs/liked.svg' : '/svgs/like.svg'}
+									alt='like icon'
+									fill
+								/>
 							</div>
 						}
 					/>
@@ -37,7 +41,7 @@ const PostComment = ({ caption, likes, name }: IPostComment) => {
 						color='green'
 						icon={
 							<div className='relative w-6 h-full'>
-								<Image src={chat} alt='like icon' fill />
+								<Image src={'/svgs/chat.svg'} alt='chat icon' fill />
 							</div>
 						}
 					/>
@@ -46,7 +50,7 @@ const PostComment = ({ caption, likes, name }: IPostComment) => {
 						color='black'
 						icon={
 							<div className='relative w-6 h-full'>
-								<Image src={share} alt='like icon' fill />
+								<Image src={'/svgs/share.svg'} alt='share icon' fill />
 							</div>
 						}
 					/>
@@ -56,7 +60,7 @@ const PostComment = ({ caption, likes, name }: IPostComment) => {
 					color='black'
 					icon={
 						<div className='relative h-6 w-4'>
-							<Image src={bookmark} alt='bookmark' fill />
+							<Image src={'/svgs/save.svg'} alt='bookmark' fill />
 						</div>
 					}
 				/>
@@ -72,7 +76,7 @@ const PostComment = ({ caption, likes, name }: IPostComment) => {
 			<div className='border-t px-4 py-4 flex justify-between items-center border-gray01'>
 				<div className='flex gap-x-2 items-center'>
 					<div className='relative w-6 h-6'>
-						<Image src={smiley} alt='smiley' fill />
+						<Image src={'/svgs/smiley.svg'} alt='smiley' fill />
 					</div>
 					<Input bordered={false} placeholder='Add comment...' />
 				</div>
