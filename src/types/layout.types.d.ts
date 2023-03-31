@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
 
-interface LayoutTypes {
+interface ILayout {
 	children: ReactNode;
 }

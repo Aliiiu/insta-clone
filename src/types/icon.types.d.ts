@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
-interface IconBtnType {
-	children: ReactNode;
+interface IIconBtn {
+	icon: ReactNode;
 	title: string;
 	color: string;
 }

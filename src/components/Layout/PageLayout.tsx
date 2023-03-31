@@ -1,8 +1,8 @@
-import { LayoutTypes } from '@/src/types/layout.types';
+import { ILayout } from '@/src/types/layout.types';
 import React from 'react';
 import TopNav from './TopNav';
 
-const PageLayout = ({ children }: LayoutTypes) => {
+const PageLayout = ({ children }: ILayout) => {
 	return (
 		<>
 			<TopNav />

@@ -13,16 +13,16 @@ export default function Home() {
 			</Head>
 			<PageLayout>
 				<div className='container max-w-[1100px] xl:px-20 h-full pb-2 mx-auto flex gap-x-7 md:px-0'>
-					<div className='md:border border-gray01 bg-white h-full overflow-y-auto w-full md:w-[65%]'>
+					<div className='md:border border-gray01 bg-white h-full overflow-y-auto scrollbar-hide w-full md:w-[65%]'>
 						<Stories />
 						{postList.map((item) => (
 							<Posts
 								key={item.id}
 								name={item.name}
 								post={item.post}
-								profile_pic={item.profile_pic}
+								profilePicture={item.profile_pic}
 								caption={item.caption}
-								number_of_likes={item.number_of_likes}
+								numberOfLikes={item.number_of_likes}
 							/>
 						))}
 					</div>

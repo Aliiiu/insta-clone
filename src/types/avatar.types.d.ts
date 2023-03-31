@@ -1,4 +1,4 @@
-interface AvatarTypes {
+interface IAvatar {
 	img: ReactNode;
 	name?: string;
 	showName: boolean;

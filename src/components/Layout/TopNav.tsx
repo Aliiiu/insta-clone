@@ -1,13 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import Logo from '../../assets/svgs/IGLogo.svg';
-import Search from '../../assets/svgs/Search.svg';
 import HomeLogo from '../../assets/svgs/home.svg';
 import Messenger from '../../assets/svgs/messenger.svg';
 import Post from '../../assets/svgs/NewPosts.svg';
 import Navigation from '../../assets/svgs/navigation.svg';
 import Notification from '../../assets/svgs/like.svg';
-import AppButton from '../Widget/Icon';
+import Tooltip from '../Widget/Tooltip';
 import { Avatar, Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 
@@ -27,37 +26,57 @@ const TopNav = () => {
 							/>
 						</div>
 					</div>
-					<div className='hidden md:flex gap-x-5 items-center'>
-						<AppButton color='black' title='home'>
-							<button className=' w-6 h-6 relative'>
-								<Image src={HomeLogo} alt='home-icon' fill />
-							</button>
-						</AppButton>
-						<AppButton color='black' title='messenger'>
-							<button className=' w-6 h-6 relative'>
-								<Image src={Messenger} alt='home-icon' fill />
-							</button>
-						</AppButton>
-						<AppButton color='black' title='New Post'>
-							<button className=' w-6 h-6 relative'>
-								<Image src={Post} alt='home-icon' width={25} height={25} />
-							</button>
-						</AppButton>
-						<AppButton color='black' title='Explore'>
-							<button className=' w-6 h-6 relative'>
-								<Image src={Navigation} alt='home-icon' fill />
-							</button>
-						</AppButton>
-						<AppButton color='black' title='Notifications'>
-							<button className=' w-6 h-6 relative'>
-								<Image
-									src={Notification}
-									alt='home-icon'
-									width={25}
-									height={25}
-								/>
-							</button>
-						</AppButton>
+					<div className='hidden md:flex gap-x-3 items-center'>
+						<Tooltip
+							color='black'
+							title='home'
+							icon={
+								<div className=' w-6 h-6 relative'>
+									<Image src={HomeLogo} alt='home-icon' fill />
+								</div>
+							}
+						/>
+						<Tooltip
+							color='black'
+							title='messenger'
+							icon={
+								<div className=' w-6 h-6 relative'>
+									<Image src={Messenger} alt='home-icon' fill />
+								</div>
+							}
+						/>
+						<Tooltip
+							color='black'
+							title='New Post'
+							icon={
+								<div className=' w-6 h-6 relative'>
+									<Image src={Post} alt='home-icon' width={25} height={25} />
+								</div>
+							}
+						/>
+						<Tooltip
+							color='black'
+							title='Explore'
+							icon={
+								<div className=' w-6 h-6 relative'>
+									<Image src={Navigation} alt='home-icon' fill />
+								</div>
+							}
+						/>
+						<Tooltip
+							color='black'
+							title='Notifications'
+							icon={
+								<div className=' w-6 h-6 relative'>
+									<Image
+										src={Notification}
+										alt='home-icon'
+										width={25}
+										height={25}
+									/>
+								</div>
+							}
+						/>
 						<Avatar src='/images/pic1.png' className='w-6 h-6' />
 					</div>
 				</div>

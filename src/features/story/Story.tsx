@@ -1,18 +1,9 @@
 import { storyList } from '@/src/constants/storyList';
 import { Carousel } from 'antd';
 import React, { CSSProperties, useEffect, useState } from 'react';
-import AvatarBadge from '../../components/Widget/Avatar';
+import Avatar from '../../components/Widget/Avatar';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
-
-const arrowSize = 20;
-const arrowOffset = 20;
-const arrow: CSSProperties = {
-	color: '#fff',
-	fontSize: arrowSize,
-	height: arrowSize,
-	width: arrowSize,
-	zIndex: 1,
-};
+import { ArrowStyles } from './story.styles';
 
 interface AntdArrowProps {
 	currentSlide?: number;
@@ -34,40 +25,11 @@ const Arrow = ({
 			<LeftOutlined
 				className='icon'
 				{...carouselProps}
-				style={{
-					...arrow,
-					left: arrowOffset,
-					top: 50,
-					color: '#8E8E8E',
-					width: '24px',
-					height: '24px',
-					backgroundColor: '#fff',
-					fontSize: '38px',
-					display: 'flex',
-					justifyContent: 'space-between',
-					alignItems: 'center',
-					borderRadius: '50%',
-				}}
+				style={ArrowStyles.leftArrow}
 			/>
 		</>
 	) : (
-		<RightOutlined
-			{...carouselProps}
-			style={{
-				...arrow,
-				right: arrowOffset,
-				top: 50,
-				color: '#8E8E8E',
-				width: '24px',
-				height: '24px',
-				backgroundColor: '#fff',
-				fontSize: '38px',
-				display: 'flex',
-				justifyContent: 'space-between',
-				alignItems: 'center',
-				borderRadius: '50%',
-			}}
-		/>
+		<RightOutlined {...carouselProps} style={ArrowStyles.rightArrow} />
 	);
 
 const Stories = () => {
@@ -118,7 +80,7 @@ const Stories = () => {
 					className='flex gap-x-4 py-4 pl-6'
 				>
 					{storyList.map((item) => (
-						<AvatarBadge
+						<Avatar
 							img={item.img}
 							key={item.id}
 							name={item.name}

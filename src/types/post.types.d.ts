@@ -1,21 +1,21 @@
 import { ImageProps } from 'next/image';
 import { ReactNode } from 'react';
 
-interface PostTypes {
+interface IPost {
 	name: string;
-	profile_pic: ReactNode;
+	profilePicture: ReactNode;
 	post: ImageProps['src'];
 	caption: string;
-	number_of_likes: number;
+	numberOfLikes: number;
 }
 
-interface PostCommentTypes {
+interface IPostComment {
 	caption: string;
 	likes: number;
 	name: string;
 }
 
-interface ShowMoreTypes {
+interface IShowMore {
 	caption: string;
 	name: string;
 	maxLength: number;

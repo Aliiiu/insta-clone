@@ -1,7 +1,7 @@
-import { ShowMoreTypes } from '@/src/types/post.types';
+import { IShowMore } from '@/src/types/post.types';
 import React, { useState } from 'react';
 
-const ShowMoreCation = ({ caption, name, maxLength }: ShowMoreTypes) => {
+const ShowMoreCation = ({ caption, name, maxLength }: IShowMore) => {
 	const [showFullText, setShowFullText] = useState(false);
 
 	const handleShowFullText = () => {
@@ -13,7 +13,15 @@ const ShowMoreCation = ({ caption, name, maxLength }: ShowMoreTypes) => {
 			{showFullText ? (
 				<p className='text-sm'>{caption}</p>
 			) : (
-				<p className='text-sm'>{caption.slice(0, maxLength)}</p>
+				<>
+					<p className='text-sm md:hidden'>{caption.slice(0, 50)}</p>
+					<p className='text-sm hidden lg:hidden md:inline-flex'>
+						{caption.slice(0, 55)}
+					</p>
+					<p className='text-sm hidden lg:inline-flex'>
+						{caption.slice(0, maxLength)}
+					</p>
+				</>
 			)}
 			<button onClick={handleShowFullText} className='text-sm text-gray02'>
 				{showFullText ? '...less' : '...more'}
